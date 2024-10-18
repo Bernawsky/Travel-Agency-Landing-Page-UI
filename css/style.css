@@ -1581,10 +1581,6 @@ footer{
 
 @media screen and (max-width:590px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
     .container-easy{
         grid-template-columns: 100%;
     }
@@ -1592,7 +1588,8 @@ footer{
 
 /*Desenvolvimento Mobile*/
 
-@media screen and (max-width:430px) {
+@media screen and (max-width: 500px) {
+
 
     .container-title{
         padding: 20px;

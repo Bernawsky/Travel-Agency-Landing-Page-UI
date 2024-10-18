@@ -1581,6 +1581,10 @@ footer{
 
 @media screen and (max-width:590px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .container-easy{
         grid-template-columns: 100%;
     }
@@ -1590,9 +1594,6 @@ footer{
 
 @media screen and (max-width:430px) {
 
-    body{
-        overflow: hidden;
-    }
     .container-title{
         padding: 20px;
     }

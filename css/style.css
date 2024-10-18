@@ -1262,9 +1262,8 @@ footer{
         position: fixed;
         top: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.70);
-        backdrop-filter: blur(4px);
-        box-shadow: -50px 0 30px rgba(0, 0, 0, 0.70);
+        background-color: #212832;
+        box-shadow: -60px 0px 90px #212832;
         z-index: 3;
         animation: 0.3s open-bar ease-in-out;
     }
@@ -1587,13 +1586,19 @@ footer{
     }
 }
 
-@media screen and (max-width:400px) {
+/*Desenvolvimento Mobile*/
+
+@media screen and (max-width:430px) {
+
+    body{
+        overflow: hidden;
+    }
     .container-title{
         padding: 20px;
     }
 
     .container-items-category{
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
     }
 
     .item-category{
@@ -1683,24 +1688,29 @@ footer{
     }
 
     .container-subscribe{
-        width: 90%;
+        width: 360px;
         height: 100%;
         padding: 30px 0px 10px 0px;
         margin-bottom: 0px;
     }
 
     .container-subscribe form{
-        width: 100%;
+        width: 350px;
         flex-direction: column;
     }
 
     .container-subscribe input{
-        width: 350px;
+        width: 300px;
     }
 
     .container-subscribe i{
         top: 34px;
-        left: 45px;
+        left: 40px;
+    }
+
+    #style-send{
+        top: -20px;
+        right: 0px;
     }
 
     #style-5{

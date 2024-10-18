@@ -1,5 +1,3 @@
-//translation
-
 function translatePage() {
   const select = document.getElementById("language-select");
   const lang = select.value;
@@ -9,8 +7,6 @@ function translatePage() {
   )}`;
   window.location.href = translateUrl; // Redireciona para o Google Tradutor
 }
-
-//open nav bar
 
 myFunction(screen);
 screen.addEventListener("change", function () {
@@ -69,3 +65,66 @@ myFunction(screen);
 
 // Adicione o listener para detectar mudanças no tamanho da tela
 screen.addListener(myFunction);
+
+const skip = document.getElementById("skip");
+const back = document.getElementById("back");
+const testimonial1 = document.getElementById("testimonial1");
+const testimonial2 = document.getElementById("testimonial2");
+
+function iconSkip() {
+  if ((back.style.pointerEvents = "none")) {
+    back.style.pointerEvents = "all"
+    skip.style.pointerEvents = "none"
+    testimonial1.style.animation = "skip-testimonials1 1s ease-out";
+    setTimeout(() => {
+      testimonial1.style.display = "none";
+    }, 1000);
+    testimonial2.style.animation = "skip-testimonials2 1s ease-out";
+    testimonial2.style.top = "-100px"
+    testimonial2.style.right = "0px"
+    testimonial2.style.boxShadow = "10px 10px 15px rgba(0, 0, 0, 0.05);"
+  }
+}
+
+function iconBack() {
+  if((skip.style.pointerEvents = "none")) {
+    skip.style.pointerEvents = "all"
+    back.style.pointerEvents = "none"
+    testimonial1.style.animation = "back-testimonials1 1s ease-out";
+    setTimeout(() => {
+      testimonial1.style.display = "flex"
+    });
+    testimonial2.style.animation = "back-testimonials2 1s ease-out";
+    setTimeout(() =>{
+    testimonial2.style.top = "80px"
+    testimonial2.style.right = "-30px"
+  });
+    testimonial2.style.boxShadow = " 0px transparent;"
+  }
+}
+
+// window.addEventListener('click', (e) =>{
+//   if (e.target == skip){
+//     skip.style.pointerEvents = "none"
+//     testimonial1.style.animation = "skip-testimonials1 1s ease-out";
+//     setTimeout(() => {
+//       testimonial1.style.display = "none"
+//     }, 1000);
+//     testimonial2.style.animation = "skip-testimonials2 1s ease-out";
+//     testimonial2.style.top = "-100px"
+//     testimonial2.style.right = "0px"
+//   }
+// })
+
+// window.addEventListener('click', (e) =>{
+//   if (e.target == back){
+//     back.style.pointerEvents = "all"
+//     testimonial1.style.animation = "back-testimonials1 1s ease-out";
+//     setTimeout(() => {
+//       testimonial1.style.display = "flex"
+//     });
+//     testimonial2.style.animation = "back-testimonials2 1s ease-out";
+//     testimonial2.style.top = "80px"
+//     testimonial2.style.right = "-30px"
+//   } 
+// })
